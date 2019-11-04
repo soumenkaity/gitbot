@@ -1,0 +1,26 @@
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Repo Name</th>
+        <th scope="col">Created at</th>
+        <th scope="col">Remove</th>
+      </tr>
+    </thead>
+
+    <tbody *ngFor = "let repo of repos">
+       
+      <tr id="{{repo.id}}">
+        <td>{{repo.name}}</td>
+        <td>{{repo.id}}</td>
+        <td>{{repo.created_at}}</td>
+        <td><button (click)=del(repo.id) class="btn btn-danger">
+                <span class="glyphicon glyphicon-remove" aria-hidden="true">
+                </span>
+            </button></td>
+      </tr>
+    
+
+    </tbody>
+</table>

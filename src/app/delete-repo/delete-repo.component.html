@@ -1,0 +1,21 @@
+<div id="delete-repo-wrapper">
+    
+    <div id="form-heading">
+        <h3>Delete repository</h3>
+        <p>Everything in the repository will be deleted. </p>
+    <hr>           
+    </div>
+
+    <div id="delete-repo-form-wrapper" >
+        <form name="delete-repo-form" #repoForm="ngForm" method="POST" novalidate> 
+            <div class="form-group">
+                <label for="name">Repository Name</label>
+                <input [(ngModel)]="repoName" type="text" class="form-control" ngModel  name="name" placeholder="" required>
+            </div>
+            
+            <hr>
+            <button (click)=deleteRepo() type="submit" value="Submit" id="submit-button" class="btn btn-primary"> Delete Repository </button>
+        </form> 
+    </div>
+
+</div>

@@ -1,0 +1,29 @@
+<div id="list-repo-wrapper">
+    <table>
+    <tr class="list-repo-item" *ngFor="let repo of repos; index as i">
+        <td><h4 > {{repo.name}} </h4></td>
+        <td><p>{{"Repo Id: "+repo.id}}</p></td>
+        <td>
+            <div *ngIf="repo.private; then thenBlock" ></div>
+            <ng-template #thenBlock>
+                Private
+            </ng-template>
+        </td>
+        <td><p class="item-desc"> {{"Created At: "+repo.created_at}} </p></td>
+        <td>
+            <!-- <div *ngIf="getFav(repo.id); then favBlock; else nonFavBlock" ></div>
+            <ng-template #favBlock> -->
+                <button id="{{repo.id}}" (click)=star(repo.id,repo.name,repo.created_at) class="btn btn-warning">
+                    <span  id="{{repo.name}}" class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                </button> 
+            <!-- </ng-template>
+            <ng-template #nonFavBlock>
+                <button id="{{repo.id}}" (click)=star(repo.id,repo.name,repo.created_at) class="btn btn-danger">
+                    <span  id="{{repo.name}}" class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                </button> 
+            </ng-template> -->
+        </td>
+    </tr>
+    </table>
+
+</div>

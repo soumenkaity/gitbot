@@ -1,0 +1,12 @@
+<form class="example" style="margin:auto;max-width:300px">
+  <input [(ngModel)]="text" placeholder="Search.." name="search2" id="box">
+  <button (click)=userData() type="submit"><i class="fa fa-search"></i></button>
+  <h2>{{speech}}</h2>
+</form>
+
+<!-- <div style="text-align: center;"><h3>Chat Bot</h3>
+    <input [(ngModel)]="text" type="text" placeholder="" required><br>
+    <button (click)=userData() >Search</button>
+    <h2>{{speech}}</h2>
+</div> -->
+<router-outlet></router-outlet>

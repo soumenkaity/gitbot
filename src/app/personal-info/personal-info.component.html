@@ -1,0 +1,23 @@
+<div id="sidebar-wrapper">
+    <div  id="image-wrapper">
+        <img src={{myInfo.avatar_url}} alt="Avatar Image" id="profile-photo">
+    </div>
+    
+    <div  id="user-details" >
+        <h4 id="user-name"> {{myInfo.name}} </h4>
+        <h5 id="user-login"> <a href="{{myInfo.html_url}}"  target="_blank"> /{{myInfo.html_url}} </a>  </h5>
+        <br>
+        
+        <p id="user-location" > 
+            <i class="fas fa-map-marker-alt"></i>  
+            {{myInfo.location}} 
+        </p>
+        
+        <p id="user-email" > 
+            <i class="fas fa-envelope"></i> 
+            <a href="mailto:{{myInfo.email}}" > {{myInfo.email}} </a>
+        </p>
+        
+        <p id="user-bio" > {{myInfo.bio}} </p>
+    </div>
+</div>
